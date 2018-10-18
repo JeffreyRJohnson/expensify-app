@@ -1,0 +1,60 @@
+npm install --save babel-preset-env babel-preset-react
+
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+live-server public
+
+ternary 
+<h1>{user.name ? user.name : 'Anonymous'}</h1>
+
+logical and
+{user.age >= 18 && <p>Age: {user.age}</p>}
+
+
+manual data binding
+let count = 0;
+
+const addOne = () => {
+  count++;
+  renderCounterApp();
+};
+
+const appRoot = document.getElementById('app');
+
+const renderCounterApp = () => {
+  const template2 = (
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={addOne}>+1</button>
+    </div>
+  );
+
+  ReactDOM.render(template2, appRoot);
+};
+
+renderCounterApp();
+
+
+State
+1. setup default state
+2. component rendered with default state 
+3. change state based on event
+4. component re-rendered using new state values
+5. start again with new state 
+
+
+Props can't be changed by component itself
+state defined in component itself
+
+
+stateless functional component
+faster than class based props
+
+lifecycle methods (componentWillMount, etc) only available in class based components
+
+to prevent EONET error
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+
+git ssh
+
