@@ -1,0 +1,17 @@
+.text-input {
+  // uses px instead of rem to match the size of the calendar
+  border: 1px solid #cacccd;
+  font-size: $font-size-large;
+  font-weight: 300;
+  height: 50px;
+  padding: $s-size;
+}
+
+.select {
+  @extend .text-input;
+}
+
+.textarea {
+  @extend .text-input;
+  height: 10rem;
+}
